@@ -33,25 +33,25 @@ This activity reinforces:
 // ============================================
 
 // Script 1 - Greeting multiple users
-console.log("Welcome, Alice!");
-console.log("Welcome, Bob!");
-console.log("Welcome, Charlie!");
+//console.log("Welcome, Alice!");
+//console.log("Welcome, Bob!");
+//console.log("Welcome, Charlie!");
 
 // Script 2 - Sum calculation
 let num1 = 5, num2 = 10;
-let sum = num1 + num2;
-console.log("The sum of 5 and 10 is " + sum);
+//let sum = num1 + num2;
+//console.log("The sum of 5 and 10 is " + sum);
 
 // Script 3 - Product calculation
-let product = num1 * num2;
-console.log("The product of 5 and 10 is " + product);
+//let product = num1 * num2;
+//console.log("The product of 5 and 10 is " + product);
 
 // Script 4 - Print names from a list
-let names = ["Alice", "Bob", "Charlie"];
-console.log("Names in the list:");
-for (let i = 0; i < names.length; i++) {
-    console.log(names[i]);
-}
+//let names = ["Alice", "Bob", "Charlie"];
+//console.log("Names in the list:");
+//for (let i = 0; i < names.length; i++) {
+//    console.log(names[i]);
+//}
 
 /*
 ===========================================
@@ -72,3 +72,42 @@ for (let i = 0; i < names.length; i++) {
 */
 
 // ✅ Your refactored code goes below this line!
+console.log("--my code is below this line--");
+
+// Script 1 - Greeting multiple users
+function welcome(name) {
+   return `Welcome, ${name}!`;
+}
+
+console.log(welcome("Alice"));
+console.log(welcome("Bob"));
+console.log(welcome("Charlie"));
+
+// Script 2 - Sum calculation
+//how can I make num1 and num2 be placeholders rather than defined??
+
+const addNumbers = function(num1, num2) {
+   return num1 + num2;
+};
+
+addNumbers(5, 10);
+console.log("The sum of " + num1 + " and " + num2 + " is " + (addNumbers(5, 10))); 
+
+// Script 3 - Product calculation
+const multiplyNumbers = function(num1, num2) {
+   return num1 * num2;
+};
+
+multiplyNumbers(5, 10);
+console.log("The product of " + num1 + " and " + num2 + " is " + (multiplyNumbers(5, 10))); 
+
+// Script 4 - Print names from a list
+let names = ["Alice", "Bob", "Charlie"];
+
+
+function printArray(names) {
+   for (let i = 0; i < names.length; i++) {
+      console.log(names[i]);
+ }
+}
+printArray(names);
